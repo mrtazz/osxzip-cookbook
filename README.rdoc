@@ -1,0 +1,15 @@
+= DESCRIPTION:
+Chef resource to provide easy installation of Mac OS X applications,
+distributed via zip archives.
+
+= REQUIREMENTS:
+
+= ATTRIBUTES:
+:app
+:source
+:destination
+:checksum
+:installed
+
+= USAGE:
+
