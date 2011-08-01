@@ -30,12 +30,8 @@ action :install do
   end
 
   directory "#{@zippkg.destination}/__MACOSX" do
+    recursive true
     action :delete
-  end
-
-  execute "cleanup OSX artefacts" do
-    cwd @zippkg.destination
-    only_if ::File.directory? ""
   end
 
 end
