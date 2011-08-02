@@ -29,9 +29,15 @@ action :install do
     not_if @zippkg.installed
   end
 
+  file "#{@zippkg.destination}/#{@zippkg.app}.app/Contents/MacOS/#{@zippkg.app}" do
+    mode 0755
+    ignore_failure true
+  end
+
   directory "#{@zippkg.destination}/__MACOSX" do
     recursive true
     action :delete
+    ignore_failure true
   end
 
 end
